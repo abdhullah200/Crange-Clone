@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Enter Code";
+}
+
+<link rel="stylesheet" href="~/css/auth.css" asp-append-version="true" />
+
+<div class="auth-page-content">
+    <div class="signbox" style="height: 320px; width: 400px;">
+        <img src="~/images/loginLogo.png" alt="logo" class="logo">
+        <h4 class="signheading">Enter code</h4>
+        <p class="signpara">Sent to <span id="user-email"></span></p>
+        
+        <form asp-controller="Account" asp-action="CodeVerification" method="post">
+            <input class="email-input" type="text" name="code" placeholder="6-Digit Code" required><br/>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        
+        <p class="terms">
+            <a asp-controller="Account" asp-action="LoginEnterEmail">Sign in with a different email</a>
+        </p>
+        <p class="terms">
+            <a href="#">Terms of service</a>
+        </p>
+    </div>
+    
+    <script>
+        // Display the email from the previous page
+        const userEmail = sessionStorage.getItem('userEmail');
+        if (userEmail) {
+            document.getElementById('user-email').textContent = userEmail;
+        }
+    </script>
+</div>

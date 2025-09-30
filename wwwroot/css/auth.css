@@ -1,0 +1,121 @@
+/* Auth page specific styling */
+.auth-page-content {
+    background-color: #000000;
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.signbox{
+    width: 380px;
+    height: 330px;
+    background-color: #171717;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    text-align: center;
+}
+.signbox .logo{
+    width: 160px;
+    height: 30px;
+    margin-top: 20px;
+}
+.signbox .signheading{
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.validation-message {
+    font-size: small;
+    color: #ff6b6b;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.signbox .signpara{
+    font-size: small;
+    color: #849999;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+.signbox form .email-input{
+    border: 1px solid #ffffff;
+    background-color:transparent;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
+    color: white;
+}
+.signbox .email-input::before{
+    border: 3px solid #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.signbox .btn{
+    width: 360px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    background-color: #000000;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.terms p{
+    font-size: small;
+    color: white;
+    position: relative;
+    text-align: right;
+}
+.terms a{
+    text-decoration: none;
+    color: #849999;
+    background-color: #171717;
+}
+.terms a:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+.container{
+    background-color: #000000;
+    width: 100%;
+}
+
+@media(min-width: 768px){
+    .signbox{
+        width: 400px;
+        height: 300px;
+
+    }
+    .email-input{
+        width: 380px;
+    }
+    .btn{
+        width: 380px;
+    }
+    .terms p{
+        text-align: center;
+        padding-left: 0px;
+    }
+    .terms a{
+        background-color: #171717;
+    }
+    .terms a{   
+        color: #849999;
+    }
+}

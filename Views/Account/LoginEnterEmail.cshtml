@@ -1,0 +1,60 @@
+@{
+    ViewData["Title"] = "Sign In";
+}
+
+<link rel="stylesheet" href="~/css/auth.css" asp-append-version="true" />
+
+<div class="auth-page-content">
+    <div class="signbox">
+        <img src="~/images/loginLogo.png" alt="logo" class="logo">
+        <h3 class="signheading">Sign In</h3>
+        <p class="signpara">Enter your email and we'll send you a verification code</p>
+        
+        <form asp-controller="Account" asp-action="LoginEnterEmail" method="post" class="email-form">
+            <div class="validation-message" id="email-error" style="display: none; color: #ff6b6b; font-size: small; margin-bottom: 10px;"></div>
+            <input type="email" name="email" id="email" placeholder="Email" class="email-input" required><br/>
+            <button type="submit" class="btn">Continue</button>
+        </form>
+        
+        <p class="terms">
+            <a href="#">Terms of service</a>
+        </p>
+    </div>
+    
+    <script>
+        document.querySelector('.email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('email-error');
+            
+            // Simple email validation - check for at-symbol and dot characters
+            const atSymbol = String.fromCharCode(64); //  character
+            const hasAtSymbol = email.includes(atSymbol);
+            const hasDot = email.includes('.');
+            const isValidLength = email.length > 5;
+            const isValidFormat = hasAtSymbol && hasDot && isValidLength;
+            
+            if (!email) {
+                emailError.textContent = 'Email is required';
+                emailError.style.display = 'block';
+                return;
+            }
+            
+            if (!isValidFormat) {
+                emailError.textContent = 'Please enter a valid email address';
+                emailError.style.display = 'block';
+                return;
+            }
+            
+            // Hide error message if validation passes
+            emailError.style.display = 'none';
+            
+            // Store email for next page
+            sessionStorage.setItem('userEmail', email);
+            
+            // Redirect to CodeVerification
+            window.location.href = '/Account/CodeVerification';
+        });
+    </script>
+</div>

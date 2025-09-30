@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - carnage</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/carnage.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+            <div class="container-fluid px-4">
+                <!-- Logo -->
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/carnagelogo.png" alt="Carnage Logo" class="img-logo" />
+                </a>
+
+                <!-- Mobile toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation items -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <!-- MEN Mega Menu Dropdown -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold text-dark" id="menDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                MEN
+                            </a>
+                            <div class="dropdown-menu mega-menu" aria-labelledby="menDropdown">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <!-- Column 1: MEN -->
+                                        <div class="col-md-3">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">MEN</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="tanks">TANKS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="compressions">COMPRESSIONS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="hoodies">HOODIES & JACKETS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="shorts">SHORTS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="jeans">JEANS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="joggers">JOGGERS & PANTS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="underwear">UNDERWEAR</a>
+                                        </div>
+                                        
+                                        <!-- Column 2: SHOP ALL -->
+                                        <div class="col-md-3">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">SHOP ALL</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="t-shirts">T-SHIRTS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="shirts">SHIRTS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="polos">POLOS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-subcategory="shorts">SHORTS</a>
+                                        </div>
+                                        
+                                        <!-- Column 3: COLLECTIONS -->
+                                        <div class="col-md-3">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">COLLECTIONS</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-collection="premium">PREMIUM</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-collection="oversize">OVERSIZE TEE</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-collection="essentials">ESSENTIALS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="men" asp-route-collection="seamless">SEAMLESS</a>
+                                        </div>
+                                        
+                                        <!-- Column 4: Image or Featured -->
+                                        <div class="col-md-3">
+                                            <div class="mega-menu-image">
+                                                <img src="~/images/men-featured.jpg" alt="Men's Collection" class="img-fluid rounded">
+                                                <div class="mt-2">
+                                                    <a class="btn btn-outline-dark btn-sm" asp-controller="Products" asp-action="Index" asp-route-category="men">SHOP ALL MEN</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- WOMEN Mega Menu Dropdown -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold text-dark" id="womenDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                WOMEN
+                            </a>
+                            <div class="dropdown-menu mega-menu p-4" aria-labelledby="womenDropdown">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <!-- Column 1: WOMEN -->
+                                        <div class="col-md-3">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">WOMEN</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="tanks">TANKS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="sports-bras">SPORTS BRAS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="hoodies">HOODIES & JACKETS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="leggings">LEGGINGS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="shorts">SHORTS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="dresses">DRESSES</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="activewear">ACTIVEWEAR</a>
+                                        </div>
+                                        
+                                        <!-- Column 2: SHOP ALL -->
+                                        <div class="col-md-3">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">SHOP ALL</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="t-shirts">T-SHIRTS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="tops">TOPS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="yoga-pants">YOGA PANTS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-subcategory="workout-sets">WORKOUT SETS</a>
+                                        </div>
+                                        
+                                        <!-- Column 3: COLLECTIONS -->
+                                        <div class="col-md-3">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">COLLECTIONS</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-collection="premium">PREMIUM</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-collection="athleisure">ATHLEISURE</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-collection="essentials">ESSENTIALS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="women" asp-route-collection="seamless">SEAMLESS</a>
+                                        </div>
+                                        
+                                        <!-- Column 4: Image or Featured -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- ACCESSORIES Full-Width Dropdown -->
+                        <li class="nav-item dropdown mega-dropdown-fullwidth">
+                            <a class="nav-link dropdown-toggle fw-bold text-dark" id="accessoriesDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                ACCESSORIES
+                            </a>
+                            <div class="dropdown-menu mega-menu-fullwidth p-4" aria-labelledby="accessoriesDropdown">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <!-- Column 1: SHOP ALL -->
+                                        <div class="col-md-2">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">SHOP ALL</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories">SHOP ALL</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="hats">HATS AND CAPS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="slides">SLIDES</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="jewellery">JEWELLERY</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="socks">SOCKS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="bags">BAGS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="bottles">BOTTLES</a>
+                                        </div>
+                                        
+                                        <!-- Column 2: FITNESS -->
+                                        <div class="col-md-2">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">FITNESS</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="gym-bags">GYM BAGS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="water-bottles">WATER BOTTLES</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="towels">TOWELS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="gloves">GLOVES</a>
+                                        </div>
+                                        
+                                        <!-- Column 3: LIFESTYLE -->
+                                        <div class="col-md-2">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">LIFESTYLE</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="backpacks">BACKPACKS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="phone-cases">PHONE CASES</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="keychains">KEYCHAINS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="stickers">STICKERS</a>
+                                        </div>
+                                        
+                                        <!-- Column 4: SEASONAL -->
+                                        <div class="col-md-2">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">SEASONAL</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="beanies">BEANIES</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="sunglasses">SUNGLASSES</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-subcategory="scarves">SCARVES</a>
+                                        </div>
+                                        
+                                        <!-- Column 5: Featured Image -->
+                                        <div class="col-md-2">
+                                            <div class="mega-menu-image">
+                                                <img src="~/images/accessories-featured.jpg" alt="Accessories Collection" class="img-fluid rounded">
+                                                <div class="mt-2">
+                                                    <a class="btn btn-outline-dark btn-sm" asp-controller="Products" asp-action="Index" asp-route-category="accessories">SHOP ALL</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Column 6: New Arrivals -->
+                                        <div class="col-md-2">
+                                            <h6 class="dropdown-header text-uppercase fw-bold">NEW ARRIVALS</h6>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-new="true">LATEST DROPS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-featured="true">FEATURED ITEMS</a>
+                                            <a class="dropdown-item py-1" asp-controller="Products" asp-action="Index" asp-route-category="accessories" asp-route-bestseller="true">BESTSELLERS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- GIFTS -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-dark" asp-controller="Products" asp-action="Index" asp-route-category="gifts">GIFTS</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right side: Search, Account, Cart -->
+                    <div class="d-flex align-items-center">
+                        <!-- Search -->
+                        <form class="d-flex me-3" method="get" asp-controller="Products" asp-action="Search">
+                            <div class="input-group">
+                                <input class="form-control border-0 bg-light" type="search" name="query" placeholder="Search for a Product" aria-label="Search">
+                                <button class="btn btn-outline-secondary border-0 bg-light" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Account Icon -->
+                        <div class="me-3">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="LoginEnterEmail">
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                        <!-- Currency/Region -->
+                        <div class="dropdown me-3">
+                            <a class="nav-link dropdown-toggle text-dark" id="regionDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                LK
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="regionDropdown">
+                                <li><a class="dropdown-item" href="#">LK - Sri Lanka</a></li>
+                                <li><a class="dropdown-item" href="#">US - United States</a></li>
+                                <li><a class="dropdown-item" href="#">UK - United Kingdom</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Shopping Cart -->
+                        <a class="nav-link text-dark position-relative" asp-controller="Cart" asp-action="Index">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                                <span class="visually-hidden">items in cart</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - carnage - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
