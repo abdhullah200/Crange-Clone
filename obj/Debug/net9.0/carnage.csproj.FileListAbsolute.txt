@@ -21,7 +21,6 @@ C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\scopedcss\bundle\carnage.styles.css
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\scopedcss\projectbundle\carnage.bundle.scp.css
-C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\compressed\2p9opgts4y-eqiy1edpjb.gz
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\compressed\inqsjqs72l-61n19gt1b8.gz
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\compressed\s9iwppocld-xtxxf3hu2r.gz
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\compressed\q5ixseisqe-bqjiyaj88i.gz
@@ -94,4 +93,14 @@ C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\refint\carnage.dll
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\carnage.pdb
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\carnage.genruntimeconfig.cache
 C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\ref\carnage.dll
-C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\compressed\reu3xyze5w-v64c1nhggh.gz
+C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\carnage.sourcelink.json
+C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\compressed\reu3xyze5w-w90c294gqz.gz
+C:\Users\gy\Desktop\carnage\bin\Debug\net9.0\HtmlAgilityPack.dll
+C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\carnage.csproj.AssemblyReference.cache
+C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\carnage.csproj.Up2Date
+C:\Users\gy\Desktop\carnage\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\gy\Desktop\carnage\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gy\Desktop\carnage\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gy\Desktop\carnage\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\carnage.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gy\Desktop\carnage\obj\Debug\net9.0\compressed\2p9opgts4y-p7njjm7u67.gz
